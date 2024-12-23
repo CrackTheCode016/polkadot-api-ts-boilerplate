@@ -72,6 +72,27 @@ Alternatively, you can also build the project and run the files manually inside 
 npm run build
 ```
 
+## Adding a custom chain
+
+If you want to add a custom chain, such as a local one, you need to first get the metadata for your chain. You can replace `ws://localhost:9944` with your node's appropriate URL:
+
+```sh
+npx papi add custom --wsUrl ws://localhost:9944
+```
+
+Then, make sure you are using the WebSocket client (`wsClient` or `withWebSocket(url)`) and your custom metadata:
+
+```ts
+// ...
+const wsClient = await withWebSocket("ws://localhost:9944");
+const dotApi = wsClient.getTypedApi(custom);
+
+// Then, you can make calls like this...
+const last_runtime_upgrade = await dotApi.query.System.LastRuntimeUpgrade.getValue();
+console.log(last_runtime_upgrade)
+// ...
+```
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/CrackTheCode016/polkadot-api-ts-boilerplate.svg?style=for-the-badge
