@@ -32,7 +32,8 @@ async function withWebSocket(url: string): Promise<PolkadotClient> {
 
 async function main() {
     // For custom chain options, uncomment the following and add your custom URL (such as: localhost). You may also comment out the above client in this case.
-    const wsClient = await withWebSocket("ws://localhost:9944");
+    // const wsClient = await withWebSocket("ws://localhost:9944");
+    
     const lightClient = await withLightClient();
 
     // To interact with the chain, you need to get the `TypedApi`, which includes

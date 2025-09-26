@@ -25,9 +25,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/CrackTheCode016/polkadot-api-ts-boilerplate">
-    <img src="https://cryptologos.cc/logos/polkadot-new-dot-logo.png" alt="Logo" width="80" height="80">
-  </a>
 
 <h3 align="center">Polkadot API Typescript Boilerplate</h3>
 
@@ -47,9 +44,9 @@ Getting started should be simple - simply `npm install`, and you're off to the r
 
 Be sure `npm` and `npx` is up to date and working:
 
-  ```sh
-  npm install npm@latest -g
-  ```
+```sh
+npm install npm@latest -g
+```
 
 ### Installation
 
@@ -66,7 +63,7 @@ You can start a hot reloading server with `tsc-watch`, which will automatically 
 npm run start
 ```
 
-Alternatively, you can also build the project and run the files manually inside of `dist/`:
+Alternatively, you can also build the project and run the files manually inside `dist/`:
 
 ```sh
 npm run build
